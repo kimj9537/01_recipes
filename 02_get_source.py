@@ -1,8 +1,8 @@
 # Get's recipe name and checks it it not blank
 
 # Not Blank Function goes here
-def not_blank(question):
-    error = "Your recipe name has numbers in it."
+def not_blank(question, error_msg, num_ok ):
+    error = error_msg
 
 
     valid = False
@@ -10,6 +10,7 @@ def not_blank(question):
         response = input(question)
         has_errors = ""
 
+        if num_ok != "yes":
         #look at each character in string and if it's number, complain
         for letter in response:
             if letter.isdigit() == True:
@@ -17,6 +18,7 @@ def not_blank(question):
                 break
 
         if response == "":
+            #print(error)
             continue
         elif has_errors != "":
             print(error)
@@ -27,6 +29,8 @@ def not_blank(question):
 
 # Main Routine goes here
 
-recipe_name = not_blank(" What is the recipe name? ")
+source = not_blank(" Where is the recipe from? ",
+                   "The recipe source can't be blank,",
+                   "yes")
 
 print("You are making {}".format(recipe_name))

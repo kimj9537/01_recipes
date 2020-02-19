@@ -8,13 +8,13 @@ has_errors = ""
 #look at each character in string and if it's number, complain
 for letter in recipe_name:
     if __name__ == '__main__':
-        if letter.isdigit()== True:
+        if letter.isdigit() == True:
           print(error)
-
-
+          has_errors = "yes"
           break
 
 
 
   #give user feedback...
-
+if has_errors != "yes":
+     print("you are OK")
