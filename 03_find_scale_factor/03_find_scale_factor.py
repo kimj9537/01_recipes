@@ -10,9 +10,20 @@
 # Number Checking Function
 def num_check(question):
 
+    error = "Please enter a number that is more than zero"
+
+    valid = False
+    while not valid:
+        try:
+            response = float(input(question))
+
+        except ValueError:
+            print (error)
+
 
 
 # Main Routine goes here
+
 
 serving_size = float(input(" What is the recipe serving size? "))
 desired_size = float(input(" How many servings are needed? "))
