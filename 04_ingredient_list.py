@@ -34,18 +34,24 @@ ingredients = []
 stop =""
 while stop != "xxx":
     # Ask user for ingredient (via not blank function)
-     get_ingredient = not_blank("Please type in an ingredient name: "
-                                "This can't be blank",
-                                "yes")
+    get_ingredient = not_blank("Please type in an ingredient name: ",
+                               "This can't be blank",
+                               "yes")
 
-    # Stop loopin if exit code is typed and there are more
+    # Stop looping if exit code is typed and there are more
     # than 2 ingredients...
     if get_ingredient.lower()== "xxx" and len(ingredients) > 1:
-                 break
+        break
 
-      # If exit code is not entered, add ingredient to list
-     else:
-         ingredients.append(get_ingredient)
+    elif get_ingredient.lower() == "xxx" and len(ingredients) <2:
+        print("You need at least two ingredients in the list."
+              "Please add more ingredients.")
+
+    # If exit code is not entered, add ingredient to list
+    else:
+        ingredients.append(get_ingredient)
+
+
 
 # Output list
 print(ingredients)
