@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8f92343-1dd5-4bea-ac9b-13d00e237775" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/07_to_grams.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08_converter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_recipe_moderniser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/09_ingredient_splitter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
