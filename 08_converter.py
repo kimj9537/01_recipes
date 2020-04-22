@@ -5,8 +5,9 @@
 def general_converter(how_much, lookup, dictionary, conversation_factor):
 
     if lookup in dictionary:
-        mult_by = dictionary.get(unit)
-        how_much = how_much * mult_by * conversation_factor
+        mult_by = dictionary.get(lookup)
+        how_much = how_much * float(mult_by) / conversion_factor
+        converted = "yes"
 
     return how_much
 
