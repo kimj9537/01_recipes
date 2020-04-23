@@ -3,7 +3,7 @@
 import csv
 
 # ***** Functions go here ******
-def general_converter(how_much, lookup, dictionary, conversation_factor):
+def general_converter(how_much, lookup, dictionary, conversion_factor):
 
     if lookup in dictionary:
         mult_by = dictionary.get(lookup)
@@ -30,6 +30,7 @@ def unit_checker():
     litre = ["liter", "litre", "L", "l", "litres", "liters"]
     dl = ["deciliter", "decilitre", "dL"]
     pound = ["pound", "lb", "#", "pounds"]
+    grams = ["g", "gram", "grams"]
 
 
     if unit_tocheck == "":
@@ -55,6 +56,8 @@ def unit_checker():
         return "dl"
     elif unit_tocheck.lower() in pound:
         return "pound"
+    elif unit_checker.lower() in grams:
+        return "g"
 
 # ****** Main Routine Goes Here ********
 
@@ -87,7 +90,7 @@ food_dictionary = []
 for row in csv_groceries:
   food_dictionary[row[0]] = row[1]
 
-print(food_dictionary)
+# print(food_dictionary)
 
 # **** Get items etc *****
 
