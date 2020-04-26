@@ -112,9 +112,9 @@ def general_converter(how_much, lookup, dictionary, conversion_factor):
 
     return [how_much, converted]
 
-def unit_checker():
+def unit_checker(raw_unit):
 
-    unit_tocheck = input("Unit? ")
+    unit_tocheck = raw_unit
 
     # Abbreviation lists
     teaspoon = ["tsp", "teaspoon", "t" "teaspoons"]
@@ -179,7 +179,7 @@ groceries = open('01_ingredients_ml_to_g.csv')
 csv_groceries = csv.reader(groceries)
 
 # Create a dictionary to hold the data
-food_dictionary = []
+food_dictionary = {}
 
 # Add the data from the list into the dictionary
 # (first item in row is key, next is definition)
@@ -291,7 +291,7 @@ for recipe_line in full_recipe:
         modernised_recipe.append("{} {}".format(amount, unit_ingredient))
         continue
 
-    modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
+    # modernised_recipe.append("{} {} {}".format(amount, unit, ingredient))
 
 # Put updated ingredient in list
 
